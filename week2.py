@@ -24,7 +24,7 @@ print("sympy Version: ", sympy.__version__)
 import keyword
 print(keyword.kwlist)
 
-
+"""
 s1={1,2,3} # set
 print(type(s1))
 
@@ -164,18 +164,5 @@ f = open('test.txt', 'r')
 for x in f:
    print(x, end='')
 
-"""
-
-#from sklearn.datasets import load_iris
-from pandas import read_csv
-from pandas.plotting import scatter_matrix
-from matplotlib import pyplot
 
 
-
-#load_iris
-
-
-url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv"
-names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
-dataset = read_csv(url, names=names)
