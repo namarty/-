@@ -24,7 +24,7 @@ print("sympy Version: ", sympy.__version__)
 import keyword
 print(keyword.kwlist)
 
-"""
+
 s1={1,2,3} # set
 print(type(s1))
 
@@ -112,3 +112,70 @@ finally:
    print("The try-except is finished.")
 
 
+print("---------week 3------------")
+
+
+str = "Hong Gildong"
+print(str)
+print("{:/>20s}".format(str))
+print("{:/<20s}".format(str))
+
+number=123.456789123456789
+print("num: {}".format(number))
+# total digit=7, decimal point rounded to two digits
+print("num: {:7.2f}".format(number))
+# left alignment and fill with free space 0
+print("num: {:0<8.2f}".format(number))
+# right alignment and fill with free space 0
+print("num: {:0>8.2f}".format(number))
+# right alignment and fill with free space *
+print("num: {:*>8.2f}".format(number))
+
+a, b = input('Please enter two numbers: ').split()
+print(a + b)
+print(int(a) + int(b))
+
+animals = ['cat', 'dog', 'lion']
+with open('animals.dat', 'w') as file:
+ for animal in animals:
+    file.write(animal + '\n')
+
+with open('animals.dat') as file:
+   print(file.read())
+
+
+f = open('test.txt', 'w')
+f.close()
+
+f = open('test.txt', 'w')
+f.write('Opening a file\n')
+f.write('Closing a file')
+f.close()
+
+f = open('test.txt', 'r')
+f.read()
+
+f = open('test.txt', 'r')
+read = f.read()
+split = read.split()
+print(split)
+
+f = open('test.txt', 'r')
+for x in f:
+   print(x, end='')
+
+"""
+
+#from sklearn.datasets import load_iris
+from pandas import read_csv
+from pandas.plotting import scatter_matrix
+from matplotlib import pyplot
+
+
+
+#load_iris
+
+
+url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv"
+names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
+dataset = read_csv(url, names=names)
